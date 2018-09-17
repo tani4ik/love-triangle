@@ -9,9 +9,9 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
      let SpichoneeB = preferences[SpichoneeA - 1];
      let SpichoneeC = preferences[SpichoneeB - 1];
      let SpichoneeCLoves = preferences[SpichoneeC - 1];
-     if (SpichoneeA === SpichoneeCLoves) {
+     if (SpichoneeA !== SpichoneeB && SpichoneeA === SpichoneeCLoves) {
         count++;
      }
   }
-  return Math.floor(count/3);
+  return count/3;
 };
